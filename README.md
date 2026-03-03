@@ -97,6 +97,10 @@ Implementing real-world file workflows
 
 Writing clean, maintainable code
 
+Screenshot:
+<img width="620" height="349" alt="image" src="https://github.com/user-attachments/assets/4d4d69ee-93f6-4ef7-b4c6-6a1a61888555" />
+
+
 📬 Connect With Me
 
 
