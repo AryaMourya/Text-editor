@@ -13,10 +13,10 @@ class TextEditor:
 
         self.create_widgets()
         self.create_menu()
-        self.bind_shortcuts()
+        
 
         ###Widgets###
-        def create_widgets(self):
+    def create_widgets(self):
             self.text_area = tk.Text(self.main, wrap=tk.WORD, font=("Arial", 12), undo=True)
             self.text_area.pack(expand=True,fill=tk.BOTH)
             scroll_bar = tk.Scrollbar(self.text_area)
@@ -30,7 +30,7 @@ class TextEditor:
             self.text_area.bind("<<Modified>>", self.on_text_change)
 
         ###menu-bar####
-        def create_menu(self):
+    def create_menu(self):
             menu_bar = tk.Menu(self.main)
             self.main.config(menu=menu_bar)
             file_menu = tk.Menu(menu_bar, tearoff=False)
@@ -44,13 +44,13 @@ class TextEditor:
 
         ###file functions###
 
-        def new_file(self):
+    def new_file(self):
             if self.confirm_discard():
                 self.text_area.delete(1.0, tk.END)
                 self.file_path= None
                 self.main.title("Simple Text Editor")
                 self.text_changed = False
-        def open_file(self):
+    def open_file(self):
             if not self.confirm_discard():
                 return
             self.file_path= filedialog.askopenfilename(filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
@@ -60,7 +60,7 @@ class TextEditor:
                     self.text_area.insert(tk.END, file.read())
                 self.main.title(f"Simple Text Editor - {self.file_path}")
                 self.text_changed = False
-        def save_file(self):
+    def save_file(self):
             if self.file_path:
                 with open(self.file_path, "w") as file:
                     file.write(self.text_area.get(1.0, tk.END))
@@ -68,7 +68,7 @@ class TextEditor:
                 messagebox.showinfo("Saved","File saved successfully!")
             else:
                 self.save_as() 
-        def save_as_file(self):
+    def save_as_file(self):
             self.file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
             if self.file_path:
                 with open(self.file_path, "w") as file:
@@ -77,4 +77,24 @@ class TextEditor:
                 self.text_changed = False
                 messagebox.showinfo("Saved","File saved successfully!")
             
+    def exit_editor(self):
+            if self.confirm_discard():
+                self.main.destroy()
+
+    def confirm_discard(self):
+            if self.text_changed:
+                response = messagebox.askyesnocancel("Unsaved Changes", "You have unsaved changes. Do you want to save before exiting?")
+                if response:  # Yes
+                    self.save_file()
+                    return True
+                elif response is None:  # Cancel
+                    return False
+            return True
+    def on_text_change(self, event=None):
+            self.text_changed = True
+            self.text_area.edit_modified(False)
+            content = self.text_area.get(1.0, tk.END)
+            words = len(content.split())
+            lines = content.count("\n")
+            self.status_bar.config(text=f"Words: {words}  Lines: {lines}")
 
