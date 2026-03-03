@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox,filedialog
-from colorama import init, Fore, Style
+
 
 main = tk.Tk()
 main.title("Simple Text Editor")
