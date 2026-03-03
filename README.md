@@ -12,20 +12,31 @@ This project was developed to strengthen Python fundamentals and build portfolio
 The objective of this project was to:
 
 -Apply Python fundamentals in a practical application
+
 -Design a GUI-based desktop program
+
 -Implement clean, modular code using OOP
+
 -Handle file operations securely and efficiently
+
 -Improve user interaction through structured workflows
 
 🚀 Features
 
 1)Create new text files
+
 2)Open existing .txt documents
+
 3)Save files
+
 4)Save As functionality
+
 5)File path tracking
+
 6)Unsaved changes confirmation dialog
+
 7)Scrollable text interface
+
 8)Status bar displaying line and word count
 
 ##🧠 Technical Concepts Demonstrated
