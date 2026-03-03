@@ -1,1 +1,2 @@
 # GUI-apps
+This repository contains GUI applications built using Python and various libraries. Each application serves a different purpose and demonstrates the use of graphical user interfaces in Python.
