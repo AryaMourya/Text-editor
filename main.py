@@ -17,7 +17,7 @@ class TextEditor:
 
         ###Widgets###
         def create_widgets(self):
-            self.text_area = tk.Text(self.main,wrap=tk.WORD,font=("Arial 12",undo=True))
+            self.text_area = tk.Text(self.main, wrap=tk.WORD, font=("Arial", 12), undo=True)
             self.text_area.pack(expand=True,fill=tk.BOTH)
             scroll_bar = tk.Scrollbar(self.text_area)
             scroll_bar.pack(side=tk.RIGHT,fill=tk.Y)
@@ -44,11 +44,37 @@ class TextEditor:
 
         ###file functions###
 
-        def open_file(self):
+        def new_file(self):
             if self.confirm_discard():
                 self.text_area.delete(1.0, tk.END)
                 self.file_path= None
                 self.main.title("Simple Text Editor")
                 self.text_changed = False
-        
+        def open_file(self):
+            if not self.confirm_discard():
+                return
+            self.file_path= filedialog.askopenfilename(filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+            if self.file_path:
+                with open(self.file_path, "r") as file:
+                    self.text_area.delete(1.0, tk.END)
+                    self.text_area.insert(tk.END, file.read())
+                self.main.title(f"Simple Text Editor - {self.file_path}")
+                self.text_changed = False
+        def save_file(self):
+            if self.file_path:
+                with open(self.file_path, "w") as file:
+                    file.write(self.text_area.get(1.0, tk.END))
+                self.text_changed = False
+                messagebox.showinfo("Saved","File saved successfully!")
+            else:
+                self.save_as() 
+        def save_as_file(self):
+            self.file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+            if self.file_path:
+                with open(self.file_path, "w") as file:
+                    file.write(self.text_area.get(1.0, tk.END))
+                self.main.title(f"Simple Text Editor - {self.file_path}")
+                self.text_changed = False
+                messagebox.showinfo("Saved","File saved successfully!")
+            
 
