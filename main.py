@@ -98,3 +98,7 @@ class TextEditor:
             lines = content.count("\n")
             self.status_bar.config(text=f"Words: {words}  Lines: {lines}")
 
+if __name__ == "__main__":
+      main = tk.Tk()
+      app = TextEditor(main)    
+      main.mainloop()
