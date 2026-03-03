@@ -43,13 +43,12 @@ class TextEditor:
             file_menu.add_command(label="Exit", command=self.exit_editor)
 
         ###file functions###
-        def new_file(self):
-             if self.confirm_discard():
-                 self.text_area.delete(1.0, tk.END)
-                 self.file_path = None
-                 self.text_changed = False
 
         def open_file(self):
             if self.confirm_discard():
-                
+                self.text_area.delete(1.0, tk.END)
+                self.file_path= None
+                self.main.title("Simple Text Editor")
+                self.text_changed = False
+        
 
