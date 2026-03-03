@@ -74,7 +74,7 @@ text-editor/
 
 Clone the repository:
 
-git clone https://github.com/your-username/text-editor.git
+git clone https://github.com/AryaMourya/Text-editor.git
 
 Navigate into the folder:
 
