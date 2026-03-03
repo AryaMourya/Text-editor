@@ -1,43 +1,32 @@
-##📝 Desktop Text Editor Application
+📝 Desktop Text Editor Application
 
 Python | Tkinter | OOP | File Handling
 
 A structured desktop-based Text Editor built using Python and Tkinter, designed to demonstrate core concepts of GUI development, object-oriented programming, and file handling.
 
-This project was developed as part of strengthening Python fundamentals and building portfolio-ready applications.
+This project was developed to strengthen Python fundamentals and build portfolio-ready applications.
 
 
-##🎯 Project Objective
+🎯 Project Objective
 
 The objective of this project was to:
 
-Apply Python fundamentals in a practical application
+-Apply Python fundamentals in a practical application
+-Design a GUI-based desktop program
+-Implement clean, modular code using OOP
+-Handle file operations securely and efficiently
+-Improve user interaction through structured workflows
 
-Design a GUI-based desktop program
+🚀 Features
 
-Implement clean, modular code using OOP
-
-Handle file operations securely and efficiently
-
-Improve user interaction through structured workflows
-
-##🚀 Features
-
-Create new text files
-
-Open existing .txt documents
-
-Save files
-
-Save As functionality
-
-File path tracking
-
-Unsaved changes confirmation dialog
-
-Scrollable text interface
-
-Status bar displaying line and word count
+1)Create new text files
+2)Open existing .txt documents
+3)Save files
+4)Save As functionality
+5)File path tracking
+6)Unsaved changes confirmation dialog
+7)Scrollable text interface
+8)Status bar displaying line and word count
 
 ##🧠 Technical Concepts Demonstrated
 
@@ -63,14 +52,14 @@ IDE: VS Code
 
 No external libraries required
 
-##📂 Project Structure
+📂 Project Structure
 text-editor/
 │
 ├── main.py
 ├── README.md
 └── screenshots/
 
-##▶️ How to Run
+▶️ How to Run
 
 Clone the repository:
 
@@ -85,7 +74,7 @@ Run:
 `python main.py`
 
 
-##📈 Learning Outcomes
+📈 Learning Outcomes
 
 Through this project, I strengthened:
 
@@ -97,7 +86,7 @@ Implementing real-world file workflows
 
 Writing clean, maintainable code
 
-## 📬 Connect With Me
+📬 Connect With Me
 
 
 - [GitHub](https://github.com/AryaMourya)
