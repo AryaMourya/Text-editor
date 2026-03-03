@@ -1,2 +1,111 @@
-# GUI-apps
-This repository contains GUI applications built using Python and various libraries. Each application serves a different purpose and demonstrates the use of graphical user interfaces in Python.
+##📝 Desktop Text Editor Application
+
+Python | Tkinter | OOP | File Handling
+
+A structured desktop-based Text Editor built using Python and Tkinter, designed to demonstrate core concepts of GUI development, object-oriented programming, and file handling.
+
+This project was developed as part of strengthening Python fundamentals and building portfolio-ready applications.
+
+
+##🎯 Project Objective
+
+The objective of this project was to:
+
+Apply Python fundamentals in a practical application
+
+Design a GUI-based desktop program
+
+Implement clean, modular code using OOP
+
+Handle file operations securely and efficiently
+
+Improve user interaction through structured workflows
+
+##🚀 Features
+
+Create new text files
+
+Open existing .txt documents
+
+Save files
+
+Save As functionality
+
+File path tracking
+
+Unsaved changes confirmation dialog
+
+Scrollable text interface
+
+Status bar displaying line and word count
+
+##🧠 Technical Concepts Demonstrated
+
+Object-Oriented Programming (class-based architecture)
+
+Event-driven programming
+
+File handling (read, write)
+
+GUI layout management
+
+Application state management (tracking modifications)
+
+Dialog boxes (filedialog, messagebox)
+
+##🛠 Technology Stack
+
+Language: Python 3
+
+GUI Framework: Tkinter (Standard Library)
+
+IDE: VS Code
+
+No external libraries required
+
+##📂 Project Structure
+text-editor/
+│
+├── main.py
+├── README.md
+└── screenshots/
+
+##▶️ How to Run
+
+Clone the repository:
+
+git clone https://github.com/your-username/text-editor.git
+
+Navigate into the folder:
+
+cd text-editor
+
+Run:
+
+`python main.py`
+
+
+##📈 Learning Outcomes
+
+Through this project, I strengthened:
+
+Understanding of Python GUI development
+
+Structuring applications using OOP
+
+Implementing real-world file workflows
+
+Writing clean, maintainable code
+
+## 📬 Connect With Me
+
+
+- [GitHub](https://github.com/AryaMourya)
+- [LinkedIn](https://linkedin.com/in/arya-mourya-a6a126316)
+
+ ---
+
+> by Arya Mourya [AUTHOR]
+
+
+
